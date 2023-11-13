@@ -17,7 +17,14 @@ NEWSPIDER_MODULE = "schoolbooks.spiders"
 #USER_AGENT = "schoolbooks (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
+
+SCRAPEOPS_API_KEY = '76016405-cc3a-4278-91a7-8f0ccffa07d4'
+SCRAPEOPS_PROXY_ENABLED = True
+
+DOWNLOADER_MIDDLEWARES = {
+    'scrapeops_scrapy_proxy_sdk.scrapeops_scrapy_proxy_sdk.ScrapeOpsScrapyProxySdk': 725,
+}
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
